@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein Weg zur 10 km</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1D9E75" />
+  <meta name="description" content="Persönlicher 16-Wochen Laufplan – sanfter Wiedereinstieg nach der Geburt" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div>
+        <h1>Mein Weg zur 10 km</h1>
+        <p class="header-sub">16-Wochen-Plan · sanfter Wiedereinstieg nach der Geburt</p>
+      </div>
+      <div class="header-badge">🎯</div>
+    </div>
+  </header>
+
+  <main class="app-main">
+
+    <section class="progress-section" aria-label="Fortschritt">
+      <div class="progress-labels">
+        <span id="prog-week-label">Woche 1 von 16</span>
+        <span id="prog-pct">6%</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-fill" id="progress-fill" style="width:6%"></div>
+      </div>
+    </section>
+
+    <section class="week-section" aria-label="Wochennavigation">
+      <div class="week-nav">
+        <button id="btn-prev" onclick="changeWeek(-1)" disabled aria-label="Vorherige Woche">&#8592;</button>
+        <span class="week-label" id="week-label">Woche 1</span>
+        <button id="btn-next" onclick="changeWeek(1)" aria-label="Nächste Woche">&#8594;</button>
+      </div>
+      <p class="week-phase" id="week-phase"></p>
+    </section>
+
+    <section class="legend" aria-label="Legende">
+      <div class="legend-item"><span class="legend-dot run"></span>Laufen</div>
+      <div class="legend-item"><span class="legend-dot trx"></span>TRX (15 min)</div>
+      <div class="legend-item"><span class="legend-dot blackroll"></span>Blackroll</div>
+      <div class="legend-item"><span class="legend-dot rest"></span>Pause</div>
+    </section>
+
+    <section class="days-grid" id="days-grid" aria-label="Wochenplan"></section>
+
+    <section id="detail-panel" aria-label="Trainingsdetails"></section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Denk an deinen Beckenboden 💚 · Hör auf deinen Körper</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
